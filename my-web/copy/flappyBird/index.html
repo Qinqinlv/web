@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>飞翔的小鸟</title>
+    <style>
+    canvas {
+        border: 1px solid orange;
+    }
+    </style>
+   <!--  <script type="text/javascript" src="js/imgLoad.js"></script>
+    <script type="text/javascript" src="js/sky.js"></script>
+    <script type="text/javascript" src="js/land.js"></script>
+    <script type="text/javascript" src="js/pipe.js"></script>
+    <script type="text/javascript" src="js/bird.js"></script>
+    <script type="text/javascript" src="js/gameScene.js"></script>
+    <script type="text/javascript" src="js/overScene.js"></script> -->
+</head>
+
+<body>
+    <canvas id="cvs" width="800" height="800"></canvas>
+    <!-- 引入seaJS库 -->
+    <script src='./js/sea.js'></script>
+
+</body>
+<script>
+var cvs = document.getElementById("cvs");
+var ctx = cvs.getContext("2d");
+
+// 使用seaJS的use()方法引入入口模块
+
+// 首先分析flappyBird所需库的关系
+/**
+ * 1. 首先需要的模块是导入图片的模块imgLoad.js
+ *
+ * 2. 在这个imgLoad.js模块中，需要调用一个回调函数
+ * 所以需要在调用该回调函数前，使用require引入draw.js模块
+ *
+ * 3. 在draw.js模块中，需要构建场景，此时需要引入gameScene.js
+ * 模块
+ *
+ * 4. 在gameScene.js中需要导入各个具体的场景模块
+ *
+ * 5. 在draw.js模块中引入动画结束时的场景模块overScene.js
+ *
+ * 6. 此处的入口函数是imgLoad.js
+ * 
+ */
+
+seajs.use(['./js/imgLoad.js']);
+
+
+</script>
+
+
+</html>

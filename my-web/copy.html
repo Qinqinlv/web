@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- 设置当前HTML文件的字符编码 -->
+    <meta charset="utf-8">
+    <!-- 设置浏览器的兼容模式版本 （让IE使用最新的渲染引擎工作） -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 声明当前网页在移动端浏览器中展示的相关设置 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>个人网站</title>
+    <!-- 引入Bootstrap核心样式表文件 -->
+    <link rel="stylesheet" href="public/libs/bootstrap/dist/css/bootstrap.css">
+    <!-- html5shiv让浏览器可以识别HTML5的新标签 -->
+    <!-- respond让低版本浏览器可以使用CSS3的媒体查询 -->
+    <!--[if lt IE 9]> 
+        <script src='./public/libs/html5shiv.js'></script>
+        <script src='./public/libs/respond.js'></script>
+    <![endif]-->
+    <!-- 自己写的文件默认放在最下面 -->
+    <link rel="stylesheet/less" href="public/less/index.less">
+    <script src='public/libs/less.js'></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header>
+        <!-- 导航栏 -->
+        <div class="container nav-parent">
+            <div>
+                <a href="#" class="pull-left "><img src="" alt=""></a>
+            </div>
+            <div class="pull-right">
+                <nav class="my-nav row nav">
+                    <a href="#/FlappyBird" class="col-md-1  visible-md-block visible-lg-block"><span data-hover="FlappyBird">FlappyBird</span></a>
+                    <a href="#/Scene" class="col-md-1 visible-md-block visible-lg-block"><span data-hover="Scene">Scene</span></a>
+                    <a href="#/Yike" class="col-md-1 visible-md-block visible-lg-block"><span data-hover="Yike">Yike</span></a>
+                    <a href="#/WaterFlow" class="col-md-1 visible-md-block visible-lg-block"><span data-hover="WaterFlow">WaterFlow</span></a>
+                    <a href="#/Todomvc" class="col-md-1 visible-md-block visible-lg-block"><span data-hover="Todomvc">Todomvc</span></a>
+                    <a href="#/Carousel" class="col-md-1 visible-md-block visible-lg-block"><span data-hover="Carousel">Carousel</span></a>
+                </nav>
+            </div>
+        </div>
+        <!-- /导航栏 -->
+    </header>
+    <!-- /头部区域 -->
+    <!-- canvas画布区域 -->
+    <section>
+        <canvas>
+        </canvas>
+    </section>
+    <!-- /canvas画布区域 -->
+    <!-- 项目图片展示区 -->
+    <section></section>
+    <!-- /项目图片展示区 -->
+    <!-- 底部区域 -->
+    <footer></footer>
+    <!-- /底部区域 -->
+    <!-- Bootstrap 的所有JS组件都是依赖JQUERY的 -->
+    <script src="public/libs/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./public/libs/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="scripts/base.js"></script>
+</body>
+
+</html>

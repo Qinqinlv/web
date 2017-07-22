@@ -1,0 +1,159 @@
+body,ul {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background: url(../images/bg4.jpg);
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
+    .box {
+        width: 240px;
+        height: 240px;
+        margin: auto;
+        position: absolute;
+        bottom: 80px;
+        left: 0;
+        right: 0;
+       
+        perspective: 1400px;
+    }
+    
+    .box audio {
+        position: absolute;
+        bottom: -80px;
+        right: -400px;
+    }
+    .box .img {
+        width: 240px;
+        height: 240px;
+        margin: auto;
+        background-color: transparent;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: picRotate 20s linear infinite;
+    }
+    
+    .box .img ul li {
+        list-style: none;
+        width: 235px;
+        height: 235px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .box .img ul li img {
+        width: 235px;
+        height: 235px;
+        // border: 3px solid pink;
+    }
+
+    
+    .box .img ul li:nth-of-type(1) {
+        transform: rotate(0deg) translateZ(260px);
+    }
+    
+    .box .img ul li:nth-of-type(2) {
+        transform: rotateY(60deg) translateZ(260px);
+    }
+    
+    .box .img ul li:nth-of-type(3) {
+        transform: rotateY(120deg) translateZ(260px);
+    }
+    
+    .box .img ul li:nth-of-type(4) {
+        transform: rotateY(180deg) translateZ(260px);
+    }
+    
+    .box .img ul li:nth-of-type(5) {
+        transform: rotateY(240deg) translateZ(260px);
+    }
+    
+    .box .img ul li:nth-of-type(6) {
+        transform: rotateY(300deg) translateZ(260px);
+    }
+    /*鼠标滑过.img盒子时，停止动画*/
+    
+    .box > .img:hover {
+        animation-play-state: paused;
+    }
+    
+    .box > .img li:hover img {
+        transform: scale(1.1);
+        box-shadow: 0 0 5px 1px rgba(0, 0, 0, .5)
+       
+    }
+    
+    .logo {
+        position: fixed;
+        width: 80px;
+        bottom: 50px;
+        left: 60px;
+        opacity: 0;
+        animation: logo 8s linear infinite;
+    }
+
+    .logo img{
+        display: block;
+        width:100%;
+    }
+
+
+
+    /*动画*/
+
+
+    
+    @keyframes picRotate {
+        0% {
+            transform: rotateY(0deg);
+        }
+        to {
+            transform: rotateY(360deg);
+        }
+    }
+    
+    @keyframes logo {
+        0% {
+            opacity: 1;
+        }
+        /*从什么时候开始*/
+
+        10% {
+            bottom: 150px;
+            left : 130px;
+            opacity : .1;
+        }
+
+        20% {
+            bottom: 320px;
+            left: 250px;
+            opacity: .5;
+        }
+        40% {
+            bottom: 430px;
+            left: 580px;
+            opacity: 1;
+        }
+        60% {
+            bottom: 300px;
+            left: 850px;
+            opacity: .5;
+        }
+        80% {
+            bottom: 50px;
+            left: 900px;
+            opacity: 1;
+        }
+        100% {
+            bottom: -150px;
+            left: 760px;
+            opacity: 0;
+        }
+    }
+
+
+    //rotate旋转的时候，坐标系会跟着旋转

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container"></div>
+</body>
+<script src='konva.js'></script>
+<script src='./sea.js'></script>
+<script>
+var stage = new Konva.Stage({
+    'container': container,
+    width: window.innerWidth,
+    height: window.innerHeight
+});
+
+var animateLayer = new Konva.Layer();
+stage.add(animateLayer);
+
+seajs.use('./littleFn/ringSecne1.js', function(getRingScene) {
+
+    var ring = getRingScene({
+        stage: stage,
+        ringRadius: 1 / 2 * stage.width()
+    });
+
+    console.log(45);
+    ring.addToGroupOrLayer(animateLayer);
+    ring.playAnimation(animateLayer);
+
+    animateLayer.draw();
+    console.log(12);
+
+});
+</script>
+
+</html>

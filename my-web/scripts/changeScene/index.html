@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>场景切换动画</title>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        overflow: hidden;
+    }
+    </style>
+       <script src="konva.js"></script>
+       <script src='./sea.js'></script>
+       <script>
+           seajs.use('./gameScenePlus.js');
+       </script>
+</head>
+
+<body>
+    <div id="container">
+        <!-- 放置舞台的容器 -->
+    </div>
+    <script>
+    // 这个微信广告案例，已经拖延了好久，今天不做，后面又有一段时间要被毁。
+
+    // 这个微信广告，其实要分3个场景，每一屏就是一个场景，我现在想做5个屏，那么就得有5个场景。
+    // 每一个场景都是由多个对象组成的。每一个对象在初始化的时候还有动画效果。
+    // 当我把5个屏中的内容都准备好后，首先渲染到canvas上的是第一屏中的内容，
+    // 当手滑动屏幕的时候，根据滑动的方向，切换屏。
+    // 每一屏都至少有2个动画，一个称为出场动画，一个称为入场动画。
+    // 当滑动屏幕切换场景的时候，上一个场景出场后下一个场景入场。
+
+    // 现在最重要的事情就是将上面的这段话用代码实现出来。由于还没有具体的场景，所以只搭建框架即可。
+    </script>
+    <!-- <script src="myWchat.js"></script> -->
+    <!-- <script src="another.js"></script> -->
+</body>
+
+</html>
