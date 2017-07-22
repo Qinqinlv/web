@@ -1,0 +1,60 @@
+.web-decs {
+    position: relative;
+    height: 570px;
+    @media (max-width : 992px){
+        height :450px;
+    }
+    .my-desc {
+        padding-top: 160px;
+        @media (max-width : 992px) and (min-width:768px){
+            text-align: center;
+            padding-top: 100px;
+        }
+        @media (max-width : 768px){
+            text-align: center;
+            padding-top: 120px;
+            
+        }
+      
+        h2 {
+            font-size: 36px;
+            line-height: 45px;
+            margin-bottom: 30px;
+            color: #545e6b;
+            strong {
+                font-weight: 700;
+                &::selection {
+                    background-color: #2E8B57;
+                    color: #fff;
+                }
+            }
+            &::selection {
+                background-color: #2E8B57;
+                color: #fff;
+            }
+        }
+        p {
+            color: #606B77;
+            font-size: 18px;
+            line-height: 1.625;
+            strong {
+                font-weight: 700;
+                &::selection {
+                    background-color: #2E8B57;
+                    color: #fff;
+                }
+            }
+            &::selection {
+                background-color: #2E8B57;
+                color: #fff;
+            }
+        }
+    }
+    .my-canvas {
+        position: absolute;
+        bottom: 50%;
+        transform: translateY(50%);
+        right: 0;
+        padding-right: 4%;
+    }
+}

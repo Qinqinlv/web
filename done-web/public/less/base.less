@@ -1,0 +1,42 @@
+@mainColor : #2E8B57;
+@spanBg : #3CB371;
+@spanHoverColor : #008B00;
+@hColor : #545e6b;
+@pColor : #606B77;
+
+.borderRadius(@r : 4px) {
+    -webkit-border-radius: @r;
+    -moz-border-radius: @r;
+    -o-border-radius: @r;
+    -ms-border-radius: @r;
+    border-radius: @r;
+}
+
+a{
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    -webkit-tap-highlight-color:transparent;
+}
+
+a:hover {
+	color: #fff;
+	text-decoration: none;
+	 -webkit-tap-highlight-color:transparent;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h2::selection,
+h3::selection,
+h4::selection,
+p::selection {
+    background-color:@mainColor;
+    color: #fff; 
+}

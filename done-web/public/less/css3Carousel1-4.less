@@ -1,0 +1,104 @@
+.css3Carousel1 {
+    width: 500px;
+    height: 240px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 120px;
+
+    ul {
+        list-style: none;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        li {
+            width: 20%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform-style: preserve-3d;
+            transition: transform 2s;
+            div {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            div:nth-child(1) {
+                background: url(../images/css3Carousel1-4/bg1.png) no-repeat;
+                transform: rotate(0deg) translateZ(120px);
+            }
+            div:nth-child(2) {
+                background: url(../images/css3Carousel1-4/bg2.png) no-repeat;
+                transform: rotateX(-90deg) translateZ(120px);
+            }
+            div:nth-child(3) {
+                background: url(../images/css3Carousel1-4/bg3.png) no-repeat;
+                transform: rotateX(-180deg) translateZ(120px);
+            }
+            div:nth-child(4) {
+                background: url(../images/css3Carousel1-4/bg4.png) no-repeat;
+                transform: rotateX(-270deg) translateZ(120px);
+            }
+        }
+    }
+
+    a {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 50%;
+
+        margin-top: -25px;
+        background-color: rgba(0, 0, 0, .3);
+        &::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 30px;
+            height: 30px;
+            border-top: 2px solid #fff;
+            border-right: 2px solid #fff;
+            transform: rotate(-135deg);
+        }
+    }
+    a.prev {
+        left: 0;
+    }
+    a.next {
+        right: 0;
+        &::before {
+            top: 10px;
+            left: 0;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 500px) {
+
+    .css3Carousel1 {
+        width: 300px;
+         height: 144px;
+         margin-top: 180px;
+         ul li {
+
+        div:nth-child(1) {
+                transform: rotate(0deg) translateZ(72px);
+            }
+            div:nth-child(2) {
+                transform: rotateX(-90deg) translateZ(72px);
+            }
+            div:nth-child(3) {
+                transform: rotateX(-180deg) translateZ(72px);
+            }
+            div:nth-child(4) {
+                transform: rotateX(-270deg)  translateZ(72px);
+            }
+         }
+    }
+}

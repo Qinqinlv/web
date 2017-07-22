@@ -1,0 +1,10 @@
+{
+  "name": "lazy-load",
+  "main": "lazy-load.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Petah/lazy-load",
+  "authors": [
+    "David Neilsen <petah.p@gmail.com>"
+  ],
+  "license": "MIT"
+}
