@@ -1,0 +1,20 @@
+{
+  "name": "lazy-load",
+  "main": "lazy-load.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Petah/lazy-load",
+  "authors": [
+    "David Neilsen <petah.p@gmail.com>"
+  ],
+  "license": "MIT",
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.0",
+    "commit": "1cb8648ebc82bd6c4d3e8b25997ddccaca762eb7"
+  },
+  "_source": "https://github.com/Petah/lazy-load.git",
+  "_target": "^1.0.0",
+  "_originalSource": "lazy-load",
+  "_direct": true
+}

@@ -1,0 +1,41 @@
+ .floatNav {
+        width: 140px;
+        position: fixed;
+        right:0;
+        /*margin-top: 100px;*/
+        top: 100px;
+    }
+
+    .floatNav a {
+
+        display: block;
+        height: 30px;
+        color: #333;
+        text-decoration: none;
+        line-height: 30px;
+        position: relative;
+        padding-left: 50px;
+        margin-bottom: 2px;
+        background-color: #fff;
+        right:-110px;
+    }
+
+    .floatNav a span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30px;
+        border-radius: 50%;
+        text-align: center;
+        color: #fff;
+        background-color: rgba(0, 0, 0, .5);
+    }
+
+    .floatNav a:hover {
+        color: #2b5;
+    }
+
+    .floatNav a:hover span {
+        color: #fff;
+        background-color: #2b5;
+    }

@@ -1,0 +1,207 @@
+@mainColor : #2E8B57;
+@spanBg : #3CB371;
+@spanHoverColor : #008B00;
+.borderRadius(@r : 4px) {
+    -webkit-border-radius: @r;
+    -moz-border-radius: @r;
+    -o-border-radius: @r;
+    -ms-border-radius: @r;
+    border-radius: @r;
+}
+
+
+.nav-parent {
+    border: none;
+ 
+    width: 100%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background-color: @mainColor;
+    .navbar-header {
+        padding: 5px 0;
+        .my-logo {
+            
+            font-size: 30px;
+            // color: #FFF68F;
+            color: #fff;
+            .time {
+                position: absolute;
+                left:40px;
+                top:13px;
+                font-size: 50px;
+            }
+            .little-box {
+                position: absolute;
+                width: 18px;
+                height: 18px;
+                top:81px;
+                left:14px;
+                .borderRadius(50%);
+                background-color: yellow;
+                &::before,
+                &::after {
+                    content : "";
+                    position: absolute;
+                    top:-6px;
+                    left : 30px;
+                    width: 14px;
+                    height: 14px;
+                    .borderRadius(50%);
+                    background-color: purple;
+                }
+                &::after {
+                    width: 10px;
+                    height: 10px;
+                    top:-21px;
+                    left:54px;
+                    background-color: pink;
+                }
+            }
+        }
+    }
+
+    
+    .navbar-collapse {
+        border: none;
+    }
+    .navbar-toggle {
+        background-color: transparent;
+        border: none;
+        &:hover {
+            background-color: transparent;
+        }
+        &:focus {
+            background-color: transparent;
+        }
+        .icon-bar {
+            height: 1px;
+            width: 30px;
+            background-color: #333;
+            margin-bottom: 8px;
+        }
+    }
+    .nav-container > .nav-body .my-nav .first-nav {
+        padding: 50px 0 15px;
+        a {
+            display: block;
+            padding: 0 10px;
+            perspective: 800px;
+            font-size: 16px;
+            text-decoration: none;
+            color: #fff;
+            span {
+                display: block;
+                // 相对定位是不会脱离标准流的
+                position: relative;
+                background-color: @spanBg;
+                box-shadow: 0 2px 0 0 @spanHoverColor inset;
+                border-top: 1px solid @spanHoverColor;
+                width: 90px;
+                height: 50px;
+                line-height: 50px;
+                transform-style: preserve-3d;
+                text-shadow: 0 0 1px rgba(0, 0, 0, .3);
+                transform-origin: 0 50%;
+                .borderRadius;
+                // perspective写在进行3D动画的所有元素的共同父元素上。
+                // transform-style也是设置在父元素上的
+                // 疑问：只要span被设置成block，那么下面的::before的绝对定位
+                // 相对的就是span，但是span只是static啊！！
+                // 如果span是inline或者是inline-block，那么::before相对的就是
+                // a偏移的。
+                &::before {
+                    content: attr(data-hover);
+                    position: absolute;
+                    left: 0;
+                    top: 0px;
+                    height: 100%;
+                    width: 100%;
+                    line-height: 50px;
+                    background-color: #fff;
+                    color: @spanBg;
+                    .borderRadius;
+                    transform: rotateX(270deg);
+                    transform-origin: 0 0;
+                }
+            }
+            &:hover {
+                span {
+                    transition: background-color .6s;
+                    background-color: @spanHoverColor;
+                    // text-decoration: none;
+                }
+                span::before {
+                    transition: transform .6s ease-in-out;
+                    transform: rotateX(0deg);
+                }
+            }
+        }
+    }
+    .nav-container > .nav-body .my-nav .another-style {
+        padding: 20px 0;
+        a {
+            display: block;
+            padding: 0 15px;
+            font-size: 20px;
+            text-decoration: none;
+            span {
+                display: block;
+                position: relative;
+                height: 50px;
+                line-height: 50px;
+                // color:  #2F4F4F;
+                color: #fff;
+                transition: color .5s;
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    top: -10px;
+                    left: 0;
+                    background-color: transparent;
+                    transition: color, top .5s;
+                }
+                &::after {
+                    top: 110%;
+                    left: 0;
+                }
+            }
+            &:hover {
+                span {
+                    color: yellow;
+                    &::before,
+                    &::after {
+                        background-color: yellow;
+                    }
+                    &::before {
+                        top: 10%;
+                    }
+                    &::after {
+                        top: 90%;
+                    }
+                }
+            }
+        }
+    }
+    .nav-container > .nav-body .my-nav .second-nav {
+        background-color: #fff;
+        margin-top: 0;
+        margin-bottom: 0;
+        a {
+            display: block;
+            background-color: #fff;
+            color: #333;
+            font-size: 20px;
+            padding: 15px 0 15px 1em;
+            text-align: left;
+            font-weight: bold;
+            &:hover {
+                color: @mainColor;
+                border-bottom: 2px solid @mainColor;
+                padding-bottom: 13px;
+            }
+        }
+    }
+}

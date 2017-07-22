@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>正确的切割轮播图</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+    @media only screen and (max-width: 500px) {
+
+        .box {
+            width: 300px;
+        }
+        .box ul li {
+            width: 60px;
+        }
+        .box ul li>div {
+            width: 60px;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </li>
+            <li>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </li>
+            <li>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </li>
+            <li>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </li>
+            <li>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </li>
+        </ul>
+        <a href="javascript:;" class="prev"></a>
+        <a href="javascript:;" class="next"></a>
+    </div>
+</body>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src='js/index.js'></script>
+
+</html>

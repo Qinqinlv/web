@@ -1,0 +1,57 @@
+ body{
+        margin: 0;
+        padding-top: 120px;
+    }
+    
+    .demo {
+        width : 80%;
+        overflow: hidden;
+        margin:0 auto;
+    }
+    
+    .demo > .list {
+        width: 31%;
+        float: left;
+        margin:1%;
+        position: relative;
+        overflow: hidden;
+        
+    }
+    .demo > .list img {
+        display: block;
+       width: 100%;
+    }
+    .demo > .list > div {
+    	position: absolute;
+        overflow: hidden;
+        width: 100%;
+    	top:0;
+    	left: 0;
+    	transform-origin: left top;
+    	transform: rotate(-100deg);
+    	transition: transform .8s;
+    }
+     .demo > .list > div img {
+        display: block;
+        width: 100%;
+     }
+    /*鼠标滑过某个list，某个list中的div中的图片就转回到 rotate(0deg);*/
+    /*.demo > .list:hover div{
+    	transform: rotate(0deg);
+    }*/
+    .demo .current > div {
+    	transform: rotate(0deg);
+    }
+    /*需要实现的效果是：当鼠标从不同方向滑入list盒子时，list下div要从不同的transform-origin旋转回rotate(0deg);*/
+    .demo > .list div.top {
+    	transform-origin: left top;
+    }
+     .demo > .list div.right {
+    	transform-origin: right top;
+    }
+     .demo > .list div.bottom {
+    	transform-origin: right bottom;
+    }
+     .demo > .list div.left {
+    	transform-origin: left bottom;
+    }

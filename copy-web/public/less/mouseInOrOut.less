@@ -1,0 +1,70 @@
+ .mouseInOrOut {
+     width: 70%;
+     overflow: hidden;
+     margin: 0 auto; // margin-top: 120px;
+     >.list {
+         width: 31%;
+         float: left;
+         margin: 1%;
+         position: relative;
+         overflow: hidden;
+         img {
+             display: block;
+             width: 100%;
+         }
+         >div {
+             position: absolute;
+             overflow: hidden;
+             width: 100%;
+             top: 0;
+             left: 0;
+             transform-origin: left top;
+             transform: rotate(-100deg);
+             transition: transform .8s;
+             img {
+                 display: block;
+                 width: 100%;
+             }
+         }
+     }
+ }
+
+
+
+
+ /*鼠标滑过某个list，某个list中的div中的图片就转回到 rotate(0deg);*/
+ /*.mouseInOrOut > .list:hover div{
+        transform: rotate(0deg);
+    }*/
+
+ .mouseInOrOut .current>div {
+     transform: rotate(0deg);
+ }
+ /*需要实现的效果是：当鼠标从不同方向滑入list盒子时，list下div要从不同的transform-origin旋转回rotate(0deg);*/
+
+ .mouseInOrOut>.list div.top {
+     transform-origin: left top;
+ }
+
+ .mouseInOrOut>.list div.right {
+     transform-origin: right top;
+ }
+
+ .mouseInOrOut>.list div.bottom {
+     transform-origin: right bottom;
+ }
+
+ .mouseInOrOut>.list div.left {
+     transform-origin: left bottom;
+ }
+
+// 当屏幕小于768的时候，mouseInOrOut的
+// margin-top为120
+ @media (max-width : 768px){
+        .mouseInOrOut {
+            width : 80%;
+            margin-top: 180px;
+        }
+
+
+ }

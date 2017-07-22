@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>瀑布流</title>
+    <!--  <link rel="stylesheet/less" href="./less/index.less">
+    <script src='./js/less.js'></script> -->
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div class="waterfall">
+        <h1>瀑布流 展示页面</h1>
+        <div class="wrapper">
+            <div class="itemParent" id='itemParent'>
+                <div class="item">
+                    <div class="pic">
+                        <img src="./images/1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="./images/2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="./images/3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="./images/4.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="./images/20.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="./images/5.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="./images/6.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="./images/7.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="./images/8.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="./images/9.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="./images/10.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="./images/11.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="./images/12.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="./images/13.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="./images/14.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="./images/15.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="./images/16.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="./images/17.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="./images/18.jpg" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="./images/19.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<!-- 导入 要使用包 -->
+<!-- 模板引擎 -->
+<script type="text/javascript" src='./js/template-web.js'></script>
+<!-- 自己的瀑布流插件 -->
+<script type="text/javascript" src='./js/waterfallPlus.js'></script>
+<!-- 定义模板 -->
+<script type="text/template" id='template'>
+    <%  for(var i = 0 ; i < item.length ; i++ ) {%>
+        <div class="item">
+            <div class="pic">
+                <img src="<%= item[i].path %>" alt="">
+            </div>
+        </div>
+        <%}%>
+</script>
+<!-- 为按钮绑定点击事件 -->
+<script type="text/javascript">
+waterfall('itemParent');
+</script>

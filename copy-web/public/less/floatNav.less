@@ -1,0 +1,58 @@
+ .floatNav {
+     width: 110px;
+     position: fixed;
+     right: 0;
+     top: 90px;
+     a {
+         display: block;
+         height: 30px;
+         color: @pColor;
+         .borderRadius(20px);
+         width : 100%;
+         line-height: 30px;
+         position: absolute;
+         padding-left: 20px;
+         margin-bottom: 1px;
+         background-color: #fff;
+         right: -80px;
+        border-bottom: 1px solid @mainColor;
+
+         span {
+             position: absolute;
+             top: 0;
+             left: 0;
+             width: 30px;
+             .borderRadius(50%);
+             text-align: center;
+             color: #fff;
+             background-color: rgba(0, 0, 0, .2);
+         }
+
+         &:hover {
+             color: @mainColor;
+             span {
+                 color: #fff;
+                 background-color: @mainColor;
+             }
+         }
+
+     }
+     a:not(:first-of-type){
+        right: -110px;
+     }
+ }
+
+ // 当屏幕宽度 < 768的时候，此时，如果a再伸缩，就
+ // 会影响主页面中的内容了。
+ // 此时只显示圆圈，不用显示文字
+ @media (max-width : 500px){
+     .floatNav{
+        a{
+            // height : 0;
+            // width:0;
+            span{
+                // background-color: transparent;
+            }
+        }
+     }
+ }

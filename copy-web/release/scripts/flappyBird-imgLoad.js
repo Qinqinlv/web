@@ -1,0 +1,1 @@
+!function(n){window.imgLoad=function(n,o){var i,a={},c=0,f=0;for(var r in n)c++,(i=new Image).src=n[r],a[r]=i,i.onload=function(){++f>=c&&o(a)}}}();
