@@ -1,0 +1,1 @@
+!function(){var n=$("#navParent"),i="",e=null,o=!1;$(window).on("resize",function(){o||(o=!0,e=setTimeout(function(){(i=$(window).innerWidth())<=768?n.addClass("navbar-fixed-top"):n.removeClass("navbar-fixed-top"),o=!1},100))}),$(window).resize()}();
