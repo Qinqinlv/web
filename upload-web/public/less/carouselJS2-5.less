@@ -1,0 +1,58 @@
+.carousel-wrap {
+    position: relative;
+    padding-top: 45px;
+    padding-left: 10%;
+    .slide {
+        position: relative;
+        display: none;
+        li {
+            position: absolute;
+            left: 200px;
+            top: 0;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .prev,
+    .next {
+        position: absolute;
+        text-align: center;
+        font-size: 50px;
+        color: lightblue;
+        z-index: 99;
+        cursor: pointer;
+       
+    }
+
+    .prev {
+        left: 8%;
+    }
+
+    .next {
+        right: 8%;
+    }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .carousel-wrap {
+        padding-top: 120px;
+        padding-left: 0;
+
+        .prev,
+        .next {
+            font-size: 30px;
+        }
+        .next {
+            right: 5%;
+        }
+        .prev {
+            left: 5%;
+        }
+    }
+}
